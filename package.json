@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@types/k6": "^0.51.0",
     "concurrently": "^8.2.2",
     "cypress": "^13.11.0",
     "cypress-mochawesome-reporter": "^3.8.2"
