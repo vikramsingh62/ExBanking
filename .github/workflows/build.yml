@@ -43,7 +43,7 @@ jobs:
 
 
     - name: Run k6 load test
-      run: k6 run nonFunctional\nonFunctionalCases.js
+      run: k6 run nonFunctionalCases.js
 
     - name: Upload k6 results
       if: always()
