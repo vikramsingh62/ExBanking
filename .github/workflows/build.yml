@@ -33,6 +33,23 @@ jobs:
     - name: Run Cypress tests
       run: npm run test
 
+    - name: Install k6
+      run: |
+        sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 15A7B6507EAEA7E2
+        echo "deb https://dl.k6.io/deb stable main" | sudo tee -a /etc/apt/sources.list.d/k6.list
+        sudo apt-get update
+        sudo apt-get install k6
+
+    - name: Run k6 load test
+      run: k6 run --out json=results.json nonFunctionalCases.js
+
+    - name: Upload k6 results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: k6-results
+        path: results.json  
+
     - name: Stop server
       run: |
         pkill -f node
