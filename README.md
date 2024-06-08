@@ -121,6 +121,7 @@ Concurrently is a utility that allows you to run multiple commands concurrently.
 This project uses Cypress for API automation. You can run the tests directly using GitHub Actions in two ways: manually triggering the workflow or by pushing code to the repository. Here are the detailed steps for both methods.
 
 #### Running Tests via GitHub Actions
+
 1. **Method 1: Manually Triggering the Workflow**
     - **Fork the Repository**
 
@@ -160,7 +161,15 @@ This project uses Cypress for API automation. You can run the tests directly usi
     - **Download and Extract Reports**
         * Download these zip files.
         * Extract the zip files to access the reports of functional and non-functional test cases.
-        
+
+2.  **Method 2: Manually Triggering the Workflow**
+    - **Fork the Repository**
+        * Navigate to the GitHub repository containing the ExBanking project.
+        * Click the Fork button at the top right corner of the repository page to create a copy of the repository under your own GitHub account.
+     
+    - **Push any changes to the repo**
+        * It will trigger the workflow and the same can be accessible from the Github Actions tab
+    
     **Sample Images of Mochawesome Report and K6 Load Testing Report:**
     
     - **k6 Load Testing Report**
@@ -169,5 +178,5 @@ This project uses Cypress for API automation. You can run the tests directly usi
     - **Mochawesome Report**
     ![Mochawesome](https://raw.githubusercontent.com/vikramsingh62/Exbanking/main/sample%20reports/MochawesomeReport.png)
     
-    
+     
         
