@@ -167,7 +167,7 @@ This project uses Cypress for API automation. You can run the tests directly usi
         * Navigate to the GitHub repository containing the ExBanking project.
         * Click the Fork button at the top right corner of the repository page to create a copy of the repository under your own GitHub account.
      
-    - **Push any changes to the repo**
+    - **Push any changes to the repository**
         * It will trigger the workflow and the same can be accessible from the Github Actions tab
     
     **Sample Images of Mochawesome Report and K6 Load Testing Report:**
