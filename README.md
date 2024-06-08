@@ -32,6 +32,13 @@ All functional and non-functional test cases are documented in the Excel file in
 
 ### 3. Mock APIs Functional Test Cases
 
+This project implements a mock banking API using Express.js in Node.js. It provides endpoints for 
+- creating users (create_user).
+- depositing funds (deposit).
+- withdrawing funds (withdraw).
+- checking balances (get_balance)
+- transferring funds between users(send).
+
 This project contains a collection of functional test cases for testing mock APIs of the Exbanking application using a Node.js server using express. The requests can be of the following types and more. However, the collection includes only GET and POST requests as these are only required.
 
 - **GET test:** Tests the GET endpoint of the mock API by sending a GET request and validating the response code and the response data.
@@ -124,15 +131,16 @@ This project uses Cypress for API automation. You can run the tests directly usi
         Open your web browser and go to the GitHub repository containing the project.
         
     - **Navigate to GitHub Actions**
-        Click on the Actions tab located at the top of your repository page.
+        - Click on the Actions tab located at the top of your repository page.
         
     - **Select the Workflow "Automation for Func and Non-Func Test"**
-        - **Trigger the Workflow Manually**
-            * Click on the Run workflow button.
-            * This button is located at the right corner of the screen in the GitHub Actions tab.
-            * The workflow is configured with workflow_dispatch, so a form will appear when you click on "Run workflow".
-            * The "main" branch will be selected by default. You can choose a different branch if necessary.
-            * Click on the "Run workflow" button at the bottom of the form to start the workflow.
+    
+    - **Trigger the Workflow Manually**
+            - Click on the Run workflow button.
+            - This button is located at the right corner of the screen in the GitHub Actions tab.
+            - The workflow is configured with workflow_dispatch, so a form will appear when you click on "Run workflow".
+            - The "main" branch will be selected by default. You can choose a different branch if necessary.
+            - Click on the "Run workflow" button at the bottom of the form to start the workflow.
             
     - **Monitor the Workflow**
         - **Monitor in Real-Time**
@@ -141,15 +149,25 @@ This project uses Cypress for API automation. You can run the tests directly usi
             
     - **Wait for Completion**
     
-        * Wait for the workflow to complete. The duration will depend on the number of tests and their complexity.
+        * Wait for the workflow to complete. It will take around 2-4 minutes.
         
     - **View Reports**
     
         * Upon completion, two reports will be generated for Functional and Non-Functional Test cases.
         * To view these reports, go to the summary section present in the top left corner of the workflow run page.
-        * After clicking on "Summary", you will find two files at the bottom: "Mochawesome HTML Report" and "K6-result".
+        * After clicking on "Summary", you will find two files at the bottom: **"Mochawesome HTML Report"** and **"k6LoadTesting result"**.
         
     - **Download and Extract Reports**
         * Download these zip files.
         * Extract the zip files to access the reports of functional and non-functional test cases.
+        
+    **Sample Images of Mochawesome Report and K6 Load Testing Report:**
+    
+    - **k6 Load Testing Report**
+    ![K6 Load Testing Report](https://raw.githubusercontent.com/vikramsingh62/Exbanking/main/sample%20reports/K6_LoadTesting.png)
+    
+    - **Mochawesome Report**
+    ![Mochawesome](https://raw.githubusercontent.com/vikramsingh62/Exbanking/main/sample%20reports/MochawesomeReport.png)
+    
+    
         
