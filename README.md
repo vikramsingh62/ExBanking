@@ -178,5 +178,77 @@ This project uses Cypress for API automation. You can run the tests directly usi
     - **Mochawesome Report**
     ![Mochawesome](https://raw.githubusercontent.com/vikramsingh62/Exbanking/main/sample%20reports/MochawesomeReport.png)
     
-     
+
+
+# Running API Automation Code Locally
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed on your machine:
+- Node.js
+- Git
+- Cypress
+- K6
+
+## Cloning the Repository
+
+First, clone the GitHub repository to your local machine. Open a terminal and run the following command:
+
+```bash
+git clone https://github.com/vikramsingh62/Exbanking.git
+```
+
+## Installing Dependencies
+
+Install all the required dependencies using npm. Run the following command in the project directory:
+
+```bash
+npm install
+```
+
+This will install all the packages listed in the `package.json` file.
+
+## Running the Mock Server
+
+The mock server is created using Express. To start the mock server, run the following command in the Exbanking directory:
+
+```bash
+node server.js
+```
+
+This will start the server on port 3000. (Make sure Port 3000 is not already occupied)
+
+## Running Cypress Tests
+
+Cypress is used for API automation testing. To run the Cypress tests, use the following command:
+
+```bash
+npx cypress open
+```
+
+This will open the Cypress Test Runner. Select the test you want to run, and it will execute in the Cypress browser.
+
+Alternatively, you can run all tests headlessly using:
+
+```bash
+npx cypress run
+```
+
+After completing the test, a test report for Cypress will be in the `reports` folder with the name `index.html`.
+
+## Performing Load Testing with K6
+
+K6 is used for load testing. To run a K6 test, use the following command:
+
+```bash
+k6 run /Exbaking/nonFunctionalCases.js
+```
+
+After completing the test, a test report for K6 load testing will be generated in the root directory with the name `summary.html`.
+
+## Shutting Down the Server
+
+After completing all the testing for functional and non-functional cases, you can shut the server down.
+
         
+
